@@ -4,15 +4,17 @@
 ;
 ;     nasm -fmacho64 hello.asm && ld hello.o && ./a.out
 ; ----------------------------------------------------------------------------------------
+			global	_ft_write
+			extern	___error
+			section	.text
 
-          global    _ft_write
 _ft_write:	mov rax, 0x02000004
 			syscall
-			test rax, rax
-			jne   set_errno
+			jc   set_errno
 			jmp done
-			;jl done
-set_errno:	;neg rax
-			;mov rsi, rax
+
+set_errno:	mov r10, rax
+			call ___error
+			mov [rax], r10
 			mov rax, -1
 done:		ret

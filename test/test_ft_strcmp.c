@@ -6,7 +6,7 @@
 /*   By: ashishae <ashishae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 16:07:05 by ashishae          #+#    #+#             */
-/*   Updated: 2020/01/28 18:04:04 by ashishae         ###   ########.fr       */
+/*   Updated: 2020/01/28 18:07:09 by ashishae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,11 @@ void	test_ft_strcmp(void)
 	ft_putstr("\nTest 6. A longer than B               ");
 	case_ft_strcmp("Hello worl", "Hello world!");
 	case_ft_strcmp("Hello world!", "Hello worl");
-	ft_putstr("\nTest 7. 200 and 0                     ");
+	ft_putstr("\nTest 7. Test 9. Other bitewise stuff  ");
 	case_ft_strcmp("\200", "\0");
 	case_ft_strcmp("\0", "\200");
-	ft_putstr("\nTest 7. A 200 and 258                 ");
 	case_ft_strcmp("\200", "\258");
 	case_ft_strcmp("\258", "\200");
-	ft_putstr("\nTest 9. Other bitewise stuff          ");
-	case_ft_strcmp("\258", "A");
-	case_ft_strcmp("A", "\258");
 	case_ft_strcmp("\x02", "\x02\x01");
 	case_ft_strcmp("\x01\x02", "\x02");
 }

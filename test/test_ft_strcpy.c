@@ -6,7 +6,7 @@
 /*   By: ashishae <ashishae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 16:13:38 by ashishae          #+#    #+#             */
-/*   Updated: 2020/01/28 16:24:57 by ashishae         ###   ########.fr       */
+/*   Updated: 2020/01/28 16:31:41 by ashishae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	case_ft_strcpy(const char *test_case)
 
 void	test_ft_strcpy(void)
 {
-	ft_putstr("\n--- Testing ft_strcpy() --- \n");
+	ft_putstr("\n\n --- Testing ft_strcpy() --- \n");
 	ft_putstr("\nTest 1. Hello World!.                 ");
 	case_ft_strcpy("Hello world!");
 	ft_putstr("\nTest 2. Empty string.                 ");

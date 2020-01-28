@@ -1,5 +1,7 @@
 			global _ft_strcmp
+
 			section .text
+
 looper:		inc rsi
 			inc rdi
 _ft_strcmp: mov cl, byte[rsi]

@@ -6,7 +6,7 @@
 /*   By: ashishae <ashishae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 16:14:08 by ashishae          #+#    #+#             */
-/*   Updated: 2020/01/28 16:24:11 by ashishae         ###   ########.fr       */
+/*   Updated: 2020/01/28 16:31:41 by ashishae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	case_ft_strdup(char *test_case)
 
 void	test_ft_strdup(void)
 {
-	ft_putstr("\n --- Testing ft_strdup() --- \n");
+	ft_putstr("\n\n --- Testing ft_strdup() --- \n");
 	ft_putstr("\nTest 1. Hello world!                  ");
 	case_ft_strdup("Hello world!");
 	ft_putstr("\nTest 1. Empty string                  ");

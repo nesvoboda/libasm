@@ -6,7 +6,7 @@
 /*   By: ashishae <ashishae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 16:06:05 by ashishae          #+#    #+#             */
-/*   Updated: 2020/01/28 16:22:50 by ashishae         ###   ########.fr       */
+/*   Updated: 2020/01/28 16:31:04 by ashishae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	case_ft_read(int fd, int fd2, size_t nbyte)
 		else
 		{
 			if (errno == expected_errno)
-				test_pass();
+				return (test_pass());
 			test_fail();
 		}
 	}
@@ -46,7 +46,7 @@ void	test_ft_read(void)
 	int	fd;
 	int	fd2;
 
-	ft_putstr("\n --- Testing ft_read() --- \n");
+	ft_putstr("\n\n --- Testing ft_read() --- \n");
 	ft_putstr("\nTest 1. Test file                     ");
 	fd = open("test_file", O_RDONLY);
 	fd2 = open("test_file", O_RDONLY);

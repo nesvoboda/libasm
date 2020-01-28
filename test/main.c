@@ -1,24 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libasm.h                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ashishae <ashishae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/25 17:48:01 by ashishae          #+#    #+#             */
-/*   Updated: 2020/01/28 16:25:12 by ashishae         ###   ########.fr       */
+/*   Created: 2020/01/28 16:04:44 by ashishae          #+#    #+#             */
+/*   Updated: 2020/01/28 16:23:17 by ashishae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBASM_H
-# define LIBASM_H
-# include <stdlib.h>
+#include "test.h"
 
-size_t	ft_strlen(const char *str);
-char	*ft_strcpy(char *dest, const char *src);
-int		ft_strcmp(const char *s1, const char *s2);
-size_t	ft_read(int fildes, void *buf, size_t nbyte);
-size_t	ft_write(int fildes, const void *buf, size_t nbyte);
-char	*ft_strdup(const char *s1);
+void	ft_putstr(char *str)
+{
+	int	i;
 
-#endif
+	i = 0;
+	while (str[i])
+		i++;
+	write(1, str, i);
+}
+
+void	test_pass(void)
+{
+	ft_putstr("\e[32m[PASS]\e[0m ");
+}
+
+void	test_fail(void)
+{
+	ft_putstr("\e[31m[FAIL]\e[0m ");
+}
+
+int		main(void)
+{
+	test_ft_strlen();
+	test_ft_strcpy();
+	test_ft_write();
+	test_ft_strcmp();
+	test_ft_read();
+	test_ft_strdup();
+	ft_putstr("\n");
+	return (0);
+}
